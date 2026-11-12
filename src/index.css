@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --bg-gradient: linear-gradient(180deg, #faf8fd 0%, #fffdf8 55%, #fbf7ef 100%);
+  --surface: rgba(255, 255, 255, 0.76);
+  --surface-strong: rgba(255, 255, 255, 0.92);
+  --surface-muted: #f6f3fa;
+  --ink: #24143d;
+  --ink-2: #3f3257;
+  --muted: #6e6585;
+  --subtle: #8a849c;
+  --border: rgba(75, 35, 128, 0.13);
+  --border-strong: rgba(75, 35, 128, 0.42);
+  --accent: #4b2380;
+  --accent-hover: #6a35b0;
+  --focus: #b79be0;
+  --gold: #b9892b;
+  --gold-soft: #e6c57a;
+  --success: #1a8047;
+  --danger: #ba2b4c;
+  --warn: #9a6a14;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: 'DM Sans', 'Noto Sans Thai', sans-serif;
+  color: var(--ink);
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+}
+
+.display {
+  font-family: 'Space Grotesk', 'Noto Sans Thai', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+/* Thai script: negative tracking collides stacked vowels and tone marks, and tight leading clips them. */
+html[lang='th'] {
+  font-size: 106.25%;
+}
+
+html[lang='th'] body {
+  line-height: 1.65;
+}
+
+html[lang='th'] .display,
+html[lang='th'] .tracking-tight {
+  letter-spacing: 0;
+  line-height: 1.35;
+}
+
+html[lang='th'] .display.tabular-nums,
+html[lang='th'] .display.num {
+  line-height: 1.15;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.canvas::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(540px 340px at 6% 4%, rgba(155, 120, 214, 0.2), transparent 70%),
+    radial-gradient(500px 320px at 94% 94%, rgba(230, 197, 122, 0.22), transparent 70%);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: #f9faf3;
+  background: linear-gradient(155deg, #4a2287 0%, #35186a 46%, #1f0c40 100%);
+  box-shadow: 0 22px 54px rgba(42, 18, 80, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  right: -90px;
+  top: -90px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(230, 197, 122, 0.28), transparent 68%);
+  pointer-events: none;
+}
+
+/* Brand emblem watermark; shows only when /logo.png exists. */
+.hero::before {
+  content: '';
+  position: absolute;
+  right: -36px;
+  bottom: -56px;
+  width: 260px;
+  height: 260px;
+  background: url('/logo.png') center / contain no-repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.btn-light {
+  background: #ffffff;
+  color: #35186a;
+}
+
+.btn-light:hover:not(:disabled) {
+  background: #f3ecfb;
+}
+
+.spectral {
+  background: linear-gradient(90deg, #8a6420, #e6c57a 35%, #f6e2a8 50%, #e6c57a 65%, #8a6420);
+}
+
+.mono {
+  font-family: 'JetBrains Mono', Menlo, monospace;
+}
+
+.glass {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 8px 30px rgba(75, 35, 128, 0.06);
+}
+
+.inner {
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.btn-ghost {
+  background: var(--surface-strong);
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover:not(:disabled) {
+  border-color: var(--border-strong);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,2 @@
+{"type":"header","v":1,"createdAtMs":1794493870608,"hostname":"e2b.local","cwd":"/home/user/app"}
+{"type":"activity","entry":{"kind":"fund","chain":"Arc_Testnet","account":"0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266","token":"usdc","amount":"1000000000","method":"in-process","summary":"fund · Arc_Testnet · 0xf39Fd6…2266 · 1000000000 usdc","timestampMs":1794493872139}}

@@ -1,0 +1,4 @@
+{"type":"header","v":1,"createdAtMs":1794494055073,"hostname":"e2b.local","cwd":"/home/user/app"}
+{"type":"activity","entry":{"kind":"fund","chain":"Arc_Testnet","account":"0x976EA74026E726554dB657fA54763abd0C3a0aa9","token":"usdc","amount":"100000000000","method":"in-process","summary":"fund · Arc_Testnet · 0x976EA7…0aa9 · 100000000000 usdc","timestampMs":1794494055231}}
+{"type":"activity","entry":{"kind":"fund","chain":"Arc_Testnet","account":"0x14dC79964da2C08b23698B3D3cc7Ca32193d9955","token":"usdc","amount":"1000000000","method":"in-process","summary":"fund · Arc_Testnet · 0x14dC79…9955 · 1000000000 usdc","timestampMs":1794494055232}}
+{"type":"activity","entry":{"kind":"fund","chain":"Arc_Testnet","account":"0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f","token":"usdc","amount":"1000000000","method":"in-process","summary":"fund · Arc_Testnet · 0x23618e…1E8f · 1000000000 usdc","timestampMs":1794494055234}}
